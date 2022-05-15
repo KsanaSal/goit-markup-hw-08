@@ -80,5 +80,11 @@
     <symbol id="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15">
       <path d="m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z" fill="#fff" stroke="#fff" stroke-width=".2"/>
     </symbol>
+    <symbol id="icon-menu" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 14.667V12h24v2.667H8Zm0 6.666h24v-2.666H8v2.666ZM8 28h24v-2.667H8V28Z" fill="#000"/>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+      <path d="M29.667 12.88 27.787 11l-7.454 7.453L12.88 11 11 12.88l7.453 7.453L11 27.787l1.88 1.88 7.453-7.454 7.454 7.454 1.88-1.88-7.454-7.454 7.454-7.453Z" fill="#212121"/>
+    </symbol>
   </defs>
 </svg>
