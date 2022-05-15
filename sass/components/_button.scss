@@ -1,0 +1,37 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+
+    background-color: $accent-background-color;
+    color: $light-color-text;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    transition: background-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-hover-background-color;
+    }
+}
+
+.button__icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    fill: $light-color-text;
+}

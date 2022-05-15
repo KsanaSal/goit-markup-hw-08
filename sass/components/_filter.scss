@@ -1,0 +1,39 @@
+.filter {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 50px;
+
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.filter__button {
+    border-radius: 4px;
+    padding: 6px 22px;
+    border: none;
+    min-width: 73px;
+
+    background-color: $medium-background-color;
+    color: $medium-dark-color-text;
+    cursor: pointer;
+
+    transition: background-color 250ms $timing-function,
+        color 250ms $timing-function, box-shadow 250ms $timing-function;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $accent-background-color;
+        color: $light-color-text;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}

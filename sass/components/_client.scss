@@ -1,0 +1,32 @@
+.client {
+    display: flex;
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__icon {
+        width: 106px;
+        height: 60px;
+        fill: currentColor;
+    }
+}
+
+.client__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    border: 1px solid currentColor;
+    color: $darklight-background-color;
+
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-background-color;
+    }
+}

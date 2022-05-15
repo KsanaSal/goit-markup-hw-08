@@ -1,0 +1,231 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+
+    transition: opacity 250ms $timing-function;
+}
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+
+    background-color: $light-background-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms $timing-function;
+
+    &__button {
+        margin: 0 auto;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-color: $light-background-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: $dark-color-text;
+
+    transition: color 250ms $timing-function;
+
+    &:hover {
+        color: $accent-color-text;
+    }
+
+    &__icon {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+    }
+}
+
+.form-user {
+    padding: 40px;
+}
+.form-order {
+    margin-bottom: 20px;
+
+    &__title {
+        margin-bottom: 12px;
+
+        color: $medium-dark-color-text;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+    }
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.form-field__label {
+    margin-bottom: 4px;
+
+    color: $medium-light-color-text;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+}
+
+.form-field__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding-left: 42px;
+
+    &:focus,
+    &:focus-visible {
+        border: 1px solid $accent-background-color;
+        outline: none;
+    }
+
+    &:focus {
+        + .form-field__icon {
+            color: $accent-color-text;
+        }
+    }
+}
+
+.form-field__wrap {
+    position: relative;
+    color: $medium-dark-color-text;
+}
+
+.form-field__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    width: 18px;
+    height: 18px;
+
+    fill: currentColor;
+}
+
+.form-field__comment {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.accept-rule {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin-bottom: 30px;
+
+    color: $medium-light-color-text;
+    font-size: 14px;
+    line-height: 1.714;
+}
+
+.accept-rule__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked {
+        + .accept-rule__icon-box {
+            background-color: $accent-background-color;
+            border: 2px solid $accent-background-color;
+        }
+    }
+
+    &:checked {
+        ~ .accept-rule__icon-check {
+            fill-opacity: 1;
+            stroke-opacity: 1;
+        }
+    }
+}
+
+.accept-rule__icon-box {
+    display: inline-block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    background-color: $light-background-color;
+    border: 2px solid $darkmedium-background-color;
+    border-radius: 2px;
+}
+
+.accept-rule__icon-check {
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    fill-opacity: 0;
+    stroke-opacity: 0;
+}
+
+.accept-rule__contract {
+    text-decoration: underline;
+    text-underline-position: under;
+    color: $accent-color-text;
+    font-size: 14px;
+    line-height: 1.714;
+}
