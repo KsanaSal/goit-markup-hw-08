@@ -17,10 +17,25 @@ a {
 }
 
 .conteiner {
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
+}
+@media screen and (min-width: 480px) {
+    .conteiner {
+        width: 480px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .conteiner {
+        width: 768px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .conteiner {
+        width: 1200px;
+    }
 }
 
 h1,

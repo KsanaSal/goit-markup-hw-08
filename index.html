@@ -25,7 +25,7 @@
                     >Web<span class="logo__dark">Studio</span></a
                 >
 
-                <div>
+                <div class="menu-nav" data-menu>
                     <!-- navigation -->
                     <nav class="navigation">
                         <ul class="nav-site">
@@ -53,7 +53,7 @@
                     <ul class="contact">
                         <li class="contact__item">
                             <a
-                                class="contact__link"
+                                class="contact__link-mail"
                                 href="mailto:info@devstudio.com"
                             >
                                 <svg class="contact__link-icon-mail">
@@ -65,7 +65,10 @@
                             >
                         </li>
                         <li class="contact__item">
-                            <a class="contact__link" href="tel:+380961111111">
+                            <a
+                                class="contact__link-phone"
+                                href="tel:+380961111111"
+                            >
                                 <svg class="contact__link-icon-phone">
                                     <use
                                         href="./images/sprite-icons.svg#icon-smartphone"
@@ -76,13 +79,41 @@
                         </li>
                     </ul>
 
-                    <ul>
-                      <li><a href="#">Instagram</a></li>
-                      <li><a href="#">Twitter</a></li>
-                      <li><a href="#">Facebook</a></li>
-                      <li><a href="#">LinkedIn</a></li>
+                    <!-- social list -->
+                    <ul class="list-social">
+                        <li class="list-social__item">
+                            <a class="list-social__link" href="#">Instagram</a>
+                        </li>
+                        <li class="list-social__item">
+                            <a class="list-social__link" href="#">Twitter</a>
+                        </li>
+                        <li class="list-social__item">
+                            <a class="list-social__link" href="#">Facebook</a>
+                        </li>
+                        <li class="list-social__item">
+                            <a class="list-social__link" href="#">LinkedIn</a>
+                        </li>
                     </ul>
                 </div>
+
+                <!-- mobile nav-button -->
+                <button class="mobile-button" type="button" data-menu-button>
+                    <svg
+                        class="mobile-button__icon"
+                        width="40"
+                        height="40"
+                        aria-label="Переключатель мобильного меню"
+                    >
+                        <use
+                            class="mobile-button__icon-menu"
+                            href="./images/sprite-icons.svg#icon-menu"
+                        ></use>
+                        <use
+                            class="mobile-button__icon-close"
+                            href="./images/sprite-icons.svg#icon-close"
+                        ></use>
+                    </svg>
+                </button>
             </div>
         </header>
 

@@ -1,10 +1,13 @@
 .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
     color: $accent-color-text;
 
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.192;
+    font-size: 24px;
+    line-height: 1.167;
 
     &__dark {
         color: $dark-color-text;
@@ -14,4 +17,16 @@
         color: $light-color-text;
     }
 }
-
+@media screen and (min-width: 768px) {
+    .logo {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .logo {
+        padding: 0;
+        font-size: 26px;
+        line-height: 1.192;
+    }
+}
