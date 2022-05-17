@@ -47,26 +47,50 @@ p {
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-
-    &--no-padding-top {
-        padding-top: 0;
-    }
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     &__title {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
         color: $medium-dark-color-text;
 
         font-weight: 700;
-        font-size: 36px;
-        line-height: 1.167;
+        font-size: 28px;
+        line-height: 1.179;
         text-align: center;
     }
 
     &--team-background {
         background-color: $medium-background-color;
+    }
+}
+
+@media screen and (min-width: 1200x) {
+    .section {
+        padding-top: 94px;
+        padding-bottom: 94px;
+
+        &--no-padding-top {
+            padding-top: 0;
+        }
+
+        &__title {
+            margin-bottom: 50px;
+
+            font-size: 36px;
+            line-height: 1.167;
+        }
+    }
+}
+
+.works-visibility {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .works-visibility {
+        display: block;
     }
 }
 

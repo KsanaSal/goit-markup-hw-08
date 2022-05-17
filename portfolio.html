@@ -20,51 +20,102 @@
   <body>
     <!--header site web studio-->
     <header class="header">
-      <div class="conteiner header__conteiner">
-        <a class="logo" href="./index.html"
-          >Web<span class="logo__dark">Studio</span></a
-        >
+            <div class="conteiner header__conteiner">
+                <a class="logo" href="./index.html"
+                    >Web<span class="logo__dark">Studio</span></a
+                >
 
-        <!-- navigation -->
-        <nav class="navigation">
-          <ul class="nav-site">
-            <li class="nav-site__item">
-              <a
-                class="nav-site__link"
-                href="./index.html"
-                >Студия</a
-              >
-            </li>
-            <li class="nav-site__item">
-              <a class="nav-site__link  nav-site__link--current" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav-site__item">
-              <a class="nav-site__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+                <div class="menu-nav" data-menu>
+                    <!-- navigation -->
+                    <nav class="navigation">
+                        <ul class="nav-site">
+                            <li class="nav-site__item">
+                                <a
+                                    class="nav-site__link"
+                                    href="./index.html"
+                                    >Студия</a
+                                >
+                            </li>
+                            <li class="nav-site__item">
+                                <a
+                                    class="nav-site__link nav-site__link--current"
+                                    href="./portfolio.html"
+                                    >Портфолио</a
+                                >
+                            </li>
+                            <li class="nav-site__item">
+                                <a class="nav-site__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
 
-        <!-- contacts -->
-        <ul class="contact">
-          <li class="contact__item">
-            <a class="contact__link" href="mailto:info@devstudio.com">
-              <svg class="contact__link-icon-mail">
-                <use href="./images/sprite-icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact__item">
-            <a class="contact__link" href="tel:+380961111111">
-              <svg class="contact__link-icon-phone">
-                <use href="./images/sprite-icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
-      </div>
-    </header>
+                    <!-- contacts -->
+                    <ul class="contact">
+                        <li class="contact__item">
+                            <a
+                                class="contact__link-mail"
+                                href="mailto:info@devstudio.com"
+                            >
+                                <svg class="contact__link-icon-mail">
+                                    <use
+                                        href="./images/sprite-icons.svg#icon-envelope"
+                                    ></use>
+                                </svg>
+                                info@devstudio.com</a
+                            >
+                        </li>
+                        <li class="contact__item">
+                            <a
+                                class="contact__link-phone"
+                                href="tel:+380961111111"
+                            >
+                                <svg class="contact__link-icon-phone">
+                                    <use
+                                        href="./images/sprite-icons.svg#icon-smartphone"
+                                    ></use>
+                                </svg>
+                                +38 096 111 11 11</a
+                            >
+                        </li>
+                    </ul>
+
+                    <!-- social list -->
+                    <ul class="list-social">
+                        <li class="list-social__item">
+                            <a class="list-social__link" href="#">Instagram</a>
+                        </li>
+                        <li class="list-social__item">
+                            <a class="list-social__link" href="#">Twitter</a>
+                        </li>
+                        <li class="list-social__item">
+                            <a class="list-social__link" href="#">Facebook</a>
+                        </li>
+                        <li class="list-social__item">
+                            <a class="list-social__link" href="#">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- mobile nav-button -->
+                <button class="mobile-button" type="button" data-menu-button>
+                    <svg
+                        class="mobile-button__icon"
+                        width="40"
+                        height="40"
+                        aria-label="Переключатель мобильного меню"
+                    >
+                        <use
+                            class="mobile-button__icon-menu"
+                            href="./images/sprite-icons.svg#icon-menu"
+                        ></use>
+                        <use
+                            class="mobile-button__icon-close"
+                            href="./images/sprite-icons.svg#icon-close"
+                        ></use>
+                    </svg>
+                </button>
+            </div>
+        </header>
 
     <main>
       <!--portfolio site web studio-->
@@ -417,5 +468,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
