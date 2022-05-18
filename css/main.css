@@ -114,7 +114,7 @@ img {
 
 .mobile-button {
   display: flex;
-  margin: 0 auto;
+  margin-left: auto;
   padding: 0;
   z-index: 1;
   border: none;
@@ -762,15 +762,17 @@ img {
 }
 
 .footer-nav {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
 }
 .footer-nav__conection {
-  margin-right: 70px;
+  margin-bottom: 60px;
 }
 .footer-nav__logo {
   display: inline-block;
   margin-bottom: 20px;
+}
+.footer-nav .footer-nav__social {
+  margin-bottom: 60px;
 }
 
 .footer-title {
@@ -786,7 +788,7 @@ img {
   font-style: normal;
 }
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 .address__link {
   color: rgba(255, 255, 255, 0.6);
@@ -797,17 +799,10 @@ img {
   color: #FFFFFF;
 }
 
-.send {
-  margin-left: auto;
-}
-.send__form {
-  display: flex;
-}
-
 .send__email {
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding: 15px 16px;
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -834,6 +829,10 @@ img {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
+}
+
+.send-button {
+  margin: 0 auto;
 }
 
 .filter {
