@@ -115,7 +115,7 @@ img {
 .mobile-button {
   display: flex;
   margin-left: auto;
-  padding: 0;
+  padding: 10px 0;
   z-index: 1;
   border: none;
   background-color: transparent;
@@ -386,8 +386,6 @@ img {
 }
 
 .logo {
-  padding-top: 16px;
-  padding-bottom: 16px;
   color: #2196F3;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -401,12 +399,6 @@ img {
   color: #FFFFFF;
 }
 
-@media screen and (min-width: 768px) {
-  .logo {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .logo {
     padding: 0;
@@ -775,6 +767,34 @@ img {
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .footer-nav__conection {
+    margin-right: 165px;
+  }
+  .footer-nav__logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-nav {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .footer-nav__conection {
+    margin-right: 70px;
+  }
+  .footer-nav__logo {
+    justify-content: flex-start;
+  }
+}
 .footer-title {
   margin-bottom: 20px;
   color: #FFFFFF;
@@ -831,10 +851,31 @@ img {
   line-height: 1.25;
 }
 
+@media screen and (min-width: 768px) {
+  .send__email {
+    min-width: 450px;
+  }
+}
 .send-button {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .send {
+    margin-left: auto;
+  }
+  .send__form {
+    display: flex;
+  }
+  .send__email {
+    min-width: 358px;
+    margin-bottom: 0;
+  }
+
+  .send-button {
+    margin-left: 12px;
+  }
+}
 .filter {
   display: flex;
   justify-content: center;
