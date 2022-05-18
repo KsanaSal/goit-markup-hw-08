@@ -1,15 +1,33 @@
 .client {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
 
-    &__item:not(:last-child) {
-        margin-right: 30px;
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
+}
+
+.client__item {
+    max-width: 210px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 226px;
+        flex-basis: calc((100% - 6 *15px) / 3);
     }
 
-    &__icon {
-        width: 106px;
-        height: 60px;
-        fill: currentColor;
+    @media screen and (min-width: 1200px) {
+        max-width: 170px;
+        flex-basis: calc((100% - 12 * 15px) / 6);
     }
+}
+
+.client__icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
 }
 
 .client__link {
@@ -17,7 +35,6 @@
     justify-content: center;
     align-items: center;
 
-    width: 170px;
     height: 92px;
     border-radius: 4px;
     border: 1px solid currentColor;
