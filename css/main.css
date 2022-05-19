@@ -922,6 +922,14 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.card {
+  max-width: 450px;
+  background-color: #FFFFFF;
+}
+.card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .card__link {
   display: block;
 }
@@ -963,6 +971,7 @@ img {
 }
 
 .card__body {
+  min-width: 450px;
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
 }
@@ -982,6 +991,26 @@ img {
   line-height: 1.875;
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .card {
+    max-width: 354px;
+    flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+  .card:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .card__body {
+    min-width: 354px;
+  }
+}
 .backdrop {
   position: fixed;
   top: 0;
