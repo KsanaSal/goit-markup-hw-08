@@ -90,30 +90,23 @@
         margin: 15px;
 
         &:not(:last-child) {
-        margin-bottom: 15px;
-    }
+            margin-bottom: 15px;
+        }
     }
 
     .card__body {
         min-width: 354px;
+        padding: 20px 15px;
     }
 }
-// .portfolio {
-//     display: flex;
-//     flex-wrap: wrap;
-// }
-// .card {
-//     width: 370px;
-//     margin-right: 30px;
-//     margin-bottom: 30px;
 
-//     background-color: $light-background-color;
+@media screen and (min-width: 1200px) {
+    .card {
+        max-width: 370px;
+        flex-basis: calc((100% - 6 * 15px) / 3);
 
-//     &:nth-child(3n) {
-//         margin-right: 0;
-//     }
-
-//     &:nth-last-child(-n + 3) {
-//         margin-bottom: 0;
-//     }
-// }
+        &__body {
+            padding: 20px 24px;
+        }
+    }
+}

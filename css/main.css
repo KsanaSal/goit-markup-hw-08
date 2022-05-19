@@ -434,7 +434,7 @@ img {
 @media screen and (max-width: 767px) {
   .hero {
     max-width: 480px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/background-hero/bghero-mobile@1x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/background-hero/bghero-mobile@1x.jpg");
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
@@ -1009,6 +1009,16 @@ img {
 
   .card__body {
     min-width: 354px;
+    padding: 20px 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    max-width: 370px;
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  .card__body {
+    padding: 20px 24px;
   }
 }
 .backdrop {
@@ -1017,6 +1027,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1034,8 +1045,9 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 100%;
+  max-height: 609px;
+  overflow-y: auto;
   border-radius: 4px;
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1046,6 +1058,17 @@ img {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    max-height: 581px;
+  }
+}
 .close-button {
   position: absolute;
   top: 8px;
@@ -1082,10 +1105,15 @@ img {
   color: #212121;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .form-order__title {
+    line-height: 1.15;
+  }
+}
 .form-field {
   display: flex;
   flex-direction: column;
@@ -1140,8 +1168,8 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  font-size: 12px;
-  line-height: 1.167;
+  font-size: 14px;
+  line-height: 1.143;
   letter-spacing: 0.01em;
 }
 .form-field__comment::-moz-placeholder {
@@ -1154,17 +1182,33 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+@media screen and (min-width: 1200px) {
+  .form-field__comment {
+    font-size: 12px;
+    line-height: 1.167;
+  }
+}
 .accept-rule {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
+  display: block;
   margin-bottom: 30px;
   color: #757575;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.168;
 }
 
+@media screen and (min-width: 480px) {
+  .accept-rule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .accept-rule {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+}
 .accept-rule__checkbox {
   position: absolute;
   width: 1px;
@@ -1189,7 +1233,8 @@ img {
 
 .accept-rule__icon-box {
   display: inline-block;
-  margin-right: 7px;
+  vertical-align: text-top;
+  margin-right: 8px;
   width: 16px;
   height: 15px;
   background-color: #FFFFFF;
@@ -1199,19 +1244,22 @@ img {
 
 .accept-rule__icon-check {
   position: absolute;
-  top: 50%;
-  left: 9px;
-  transform: translateY(-50%);
+  left: 40px;
   width: 16px;
   height: 15px;
   fill-opacity: 0;
   stroke-opacity: 0;
+}
+@media screen and (min-width: 1200px) {
+  .accept-rule__icon-check {
+    left: 60px;
+  }
 }
 
 .accept-rule__contract {
   text-decoration: underline;
   text-underline-position: under;
   color: #2196F3;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.168;
 }/*# sourceMappingURL=main.css.map */

@@ -5,6 +5,7 @@
 
     width: 100%;
     height: 100%;
+    z-index: 2;
 
     background-color: rgba(0, 0, 0, 0.2);
 
@@ -25,8 +26,9 @@
     top: 50%;
     left: 50%;
 
-    width: 528px;
-    height: 581px;
+    width: 100%;
+    max-height: 609px;
+    overflow-y: auto;
     border-radius: 4px;
 
     background-color: $light-background-color;
@@ -39,6 +41,19 @@
 
     &__button {
         margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .modal {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .modal {
+        width: 528px;
+        max-height: 581px;
     }
 }
 
@@ -84,8 +99,13 @@
         color: $medium-dark-color-text;
         font-weight: 700;
         font-size: 20px;
-        line-height: 1.15;
+        line-height: 1.5;
         text-align: center;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .form-order__title {
+        line-height: 1.15;
     }
 }
 
@@ -153,8 +173,8 @@
     box-sizing: border-box;
     border-radius: 4px;
 
-    font-size: 12px;
-    line-height: 1.167;
+    font-size: 14px;
+    line-height: 1.143;
     letter-spacing: 0.01em;
 
     &::placeholder {
@@ -162,16 +182,35 @@
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .form-field__comment {
+        font-size: 12px;
+        line-height: 1.167;
+    }
+}
+
 .accept-rule {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    align-items: center;
+    display: block;
     margin-bottom: 30px;
 
     color: $medium-light-color-text;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.168;
+}
+
+@media screen and (min-width: 480px) {
+    .accept-rule {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .accept-rule {
+        font-size: 14px;
     line-height: 1.714;
+    }
 }
 
 .accept-rule__checkbox {
@@ -203,7 +242,8 @@
 
 .accept-rule__icon-box {
     display: inline-block;
-    margin-right: 7px;
+    vertical-align: text-top;
+    margin-right: 8px;
     width: 16px;
     height: 15px;
     background-color: $light-background-color;
@@ -213,19 +253,21 @@
 
 .accept-rule__icon-check {
     position: absolute;
-    top: 50%;
-    left: 9px;
-    transform: translateY(-50%);
+    left: 40px;
     width: 16px;
     height: 15px;
     fill-opacity: 0;
     stroke-opacity: 0;
+
+    @media screen and (min-width: 1200px) {
+        left: 60px;
+    }
 }
 
 .accept-rule__contract {
     text-decoration: underline;
     text-underline-position: under;
     color: $accent-color-text;
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 1.168;
 }
