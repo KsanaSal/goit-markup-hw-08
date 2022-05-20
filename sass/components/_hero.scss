@@ -4,6 +4,7 @@
     padding-bottom: 118px;
 
     height: 400px;
+    max-width: 1600px;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -30,8 +31,6 @@
 
 @media screen and (max-width: 767px) {
     .hero {
-        max-width: 480px;
-
         background-image: linear-gradient(
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)
@@ -54,8 +53,6 @@
 
 @media screen and (min-width: 768px) {
     .hero {
-        max-width: 768px;
-
         background-image: linear-gradient(
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)
@@ -79,7 +76,6 @@
 @media screen and (min-width: 1200px) {
     .hero {
         height: 600px;
-        max-width: 1600px;
 
         padding-top: 200px;
         padding-bottom: 200px;
@@ -101,5 +97,10 @@
                 ),
                 url(./../images/background-hero/bghero-desktop@2x.jpg);
         }
+    }
+
+    .hero__title {
+        font-size: 44px;
+        line-height: 1.364;
     }
 }
