@@ -1,26 +1,14 @@
 .filter {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 25px;
-
-    &__item:not(:last-child) {
-        margin-right: 8px;
-    }
-
-    &__item {
-        margin-bottom: 15px;
-    }
+    gap: 15px 8px;
+    margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
     .filter {
-        flex-wrap: nowrap;
         justify-content: center;
         margin-bottom: 30px;
-
-        &__item {
-        margin-bottom: 0;
-    }
     }
 }
 
